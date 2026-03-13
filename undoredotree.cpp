@@ -18,6 +18,32 @@ class Command{
     }
 };
 
+class TreeNode{
+    public:
+    Command cmd;
+    TreeNode* parent;
+    vector<TreeNode*> children;
+
+    TreeNode(Command c,TreeNode* p = nullptr){
+        cmd = c;
+        parent = p;
+        if(parent!= nullptr){
+            parent->children.push_back(this);
+        };
+    };
+};
+
+class Tree{
+    public:
+    TreeNode* rootNode;
+    TreeNode* currentNode;
+
+    Tree(){
+        rootNode= new TreeNode(Command());
+        currentNode = rootNode;
+    };
+};
+
 //--------------Action Functions----------------//
 
 void insert(vector<char>&doc,stack<Command>&undoStack,stack<Command>&redoStack,char c,int p){
