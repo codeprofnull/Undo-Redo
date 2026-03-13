@@ -79,15 +79,15 @@ int main(){
         stack<Command> undoStack;
         stack<Command> redoStack;
 
-        /*insert(doc,undoStack,redoStack,'h',0);
+        /*insert(doc,tree,'h',0);
         printDoc(doc);
-        insert(doc,undoStack,redoStack,'e',1);
+        insert(doc,tree,'e',1);
         printDoc(doc);
-        insert(doc,undoStack,redoStack,'l',2);
+        insert(doc,tree,'l',2);
         printDoc(doc);
-        insert(doc,undoStack,redoStack,'l',3);
+        insert(doc,tree,'l',3);
         printDoc(doc);
-        insert(doc,undoStack,redoStack,'o',4);
+        insert(doc,tree,'o',4);
         printDoc(doc);
         undo(doc,undoStack,redoStack);
         printDoc(doc);
